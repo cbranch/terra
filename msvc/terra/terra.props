@@ -3,7 +3,7 @@
   <ImportGroup Label="PropertySheets" />
   <PropertyGroup Label="UserMacros">
     <TERRA_ROOT>$(SolutionDir)..\..</TERRA_ROOT>
-    <LUAJIT_VERSION>LuaJIT-2.0.1</LUAJIT_VERSION>
+    <LUAJIT_VERSION>LuaJIT-2.0.2</LUAJIT_VERSION>
     <LUAJIT_DIR>$(TERRA_ROOT)\build\$(LUAJIT_VERSION)</LUAJIT_DIR>
     <CLANG_EXECUTABLE>$(LLVM_BUILD_ROOT)/bin/Release/clang.exe</CLANG_EXECUTABLE>
   </PropertyGroup>
