@@ -43,7 +43,6 @@
     <ClCompile Include="..\..\..\src\lzio.cpp" />
     <ClCompile Include="..\..\..\src\tcompiler.cpp" />
     <ClCompile Include="..\..\..\src\tcuda.cpp" />
-    <ClCompile Include="..\..\..\src\tcwrapper.cpp" />
     <ClCompile Include="..\..\..\src\terra.cpp" />
     <ClCompile Include="..\..\..\src\tinline.cpp" />
     <ClCompile Include="..\..\..\src\tkind.cpp" />

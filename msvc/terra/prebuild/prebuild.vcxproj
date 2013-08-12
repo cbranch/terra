@@ -342,29 +342,21 @@ tar -xf $(LUAJIT_VERSION).tar.gz</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(TERRA_ROOT)\build\terralib.h;$(TERRA_ROOT)\build\cudalib.h;$(TERRA_ROOT)\build\strict.h;%(Outputs)</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug Static|x64'">$(TERRA_ROOT)\build\terralib.h;$(TERRA_ROOT)\build\cudalib.h;$(TERRA_ROOT)\build\strict.h;%(Outputs)</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cd $(TERRA_ROOT)
-$(LUAJIT_DIR)\src\luajit.exe src\genclangpaths.lua $(TERRA_ROOT)\build\clangpaths.h $(CLANG_EXECUTABLE)
-
 SET LUA_PATH=$(LUAJIT_DIR)\src\?.lua
 $(LUAJIT_DIR)\src\luajit.exe -bg src\terralib.lua $(TERRA_ROOT)\build\terralib.h
 $(LUAJIT_DIR)\src\luajit.exe -bg src\cudalib.lua $(TERRA_ROOT)\build\cudalib.h
 $(LUAJIT_DIR)\src\luajit.exe -bg src\strict.lua $(TERRA_ROOT)\build\strict.h</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug Static|x64'">cd $(TERRA_ROOT)
-$(LUAJIT_DIR)\src\luajit.exe src\genclangpaths.lua $(TERRA_ROOT)\build\clangpaths.h $(CLANG_EXECUTABLE)
-
 SET LUA_PATH=$(LUAJIT_DIR)\src\?.lua
 $(LUAJIT_DIR)\src\luajit.exe -bg src\terralib.lua $(TERRA_ROOT)\build\terralib.h
 $(LUAJIT_DIR)\src\luajit.exe -bg src\cudalib.lua $(TERRA_ROOT)\build\cudalib.h
 $(LUAJIT_DIR)\src\luajit.exe -bg src\strict.lua $(TERRA_ROOT)\build\strict.h</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cd $(TERRA_ROOT)
-$(LUAJIT_DIR)\src\luajit.exe src\genclangpaths.lua $(TERRA_ROOT)\build\clangpaths.h $(CLANG_EXECUTABLE)
-
 SET LUA_PATH=$(LUAJIT_DIR)\src\?.lua
 $(LUAJIT_DIR)\src\luajit.exe -bg src\terralib.lua $(TERRA_ROOT)\build\terralib.h
 $(LUAJIT_DIR)\src\luajit.exe -bg src\cudalib.lua $(TERRA_ROOT)\build\cudalib.h
 $(LUAJIT_DIR)\src\luajit.exe -bg src\strict.lua $(TERRA_ROOT)\build\strict.h</Command>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release Static|x64'">cd $(TERRA_ROOT)
-$(LUAJIT_DIR)\src\luajit.exe src\genclangpaths.lua $(TERRA_ROOT)\build\clangpaths.h $(CLANG_EXECUTABLE)
-
 SET LUA_PATH=$(LUAJIT_DIR)\src\?.lua
 $(LUAJIT_DIR)\src\luajit.exe -bg src\terralib.lua $(TERRA_ROOT)\build\terralib.h
 $(LUAJIT_DIR)\src\luajit.exe -bg src\cudalib.lua $(TERRA_ROOT)\build\cudalib.h

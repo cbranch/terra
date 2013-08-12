@@ -39,9 +39,6 @@
     <ClCompile Include="..\..\..\src\tcuda.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\src\tcwrapper.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\src\terra.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

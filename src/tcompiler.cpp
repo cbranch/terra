@@ -101,7 +101,6 @@ static void AddLLVMOptions(int N,...) {
         const char * arg = va_arg(ap, const char *);
         ops.push_back(arg);
     }
-    cl::ParseCommandLineOptions(N+1, &ops[0]);
 }
 
 //useful for debugging GC problems. You can attach it to 
@@ -2336,7 +2335,8 @@ static int terra_saveobjimpl(lua_State * L) {
                 terra_reporterror(T,"llvm: Failed to find gcc");
             }
 #else
-            linker = sys::Path(CLANG_EXECUTABLE);
+            unlink(objname);
+            terra_reporterror(T,"llvm: Executable compilation not supported in this build");
 #endif
             
             std::vector<const char *> args;
@@ -2409,6 +2409,5 @@ static int terra_dumpmodule(lua_State * L) {
     T->C->m->dump();
     return 0;
 }
-
 
 
