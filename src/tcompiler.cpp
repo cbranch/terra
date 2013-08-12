@@ -387,7 +387,7 @@ struct CCallingConv {
                 t->type = Type::getIntNTy(*C->ctx,bytes * 8);
             } break;
             case T_logical: {
-                t->type = Type::getInt8Ty(*C->ctx);
+                t->type = Type::getInt1Ty(*C->ctx);
                 t->islogical = true;
             } break;
             default: {
