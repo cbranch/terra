@@ -101,7 +101,6 @@ static void AddLLVMOptions(int N,...) {
         const char * arg = va_arg(ap, const char *);
         ops.push_back(arg);
     }
-    cl::ParseCommandLineOptions(N+1, &ops[0]);
 }
 
 //useful for debugging GC problems. You can attach it to 
@@ -2409,6 +2408,5 @@ static int terra_dumpmodule(lua_State * L) {
     T->C->m->dump();
     return 0;
 }
-
 
 

@@ -8,7 +8,6 @@
 #include "lparser.h"
 #include "tcompiler.h"
 #include "tkind.h"
-#include "tcwrapper.h"
 #include "tcuda.h"
 
 #include <stdio.h>
@@ -152,8 +151,6 @@ int terra_init(lua_State * L) {
         free(T);
         return err;
     }
-    
-    terra_cwrapperinit(T);
     
     lua_getfield(T->L,LUA_GLOBALSINDEX,"terra");
 
