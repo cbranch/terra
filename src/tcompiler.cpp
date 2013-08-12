@@ -2335,7 +2335,8 @@ static int terra_saveobjimpl(lua_State * L) {
                 terra_reporterror(T,"llvm: Failed to find gcc");
             }
 #else
-            linker = sys::Path(CLANG_EXECUTABLE);
+            unlink(objname);
+            terra_reporterror(T,"llvm: Executable compilation not supported in this build");
 #endif
             
             std::vector<const char *> args;
